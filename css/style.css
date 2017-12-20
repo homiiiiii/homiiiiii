@@ -1,0 +1,43 @@
+body {
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+iframe{
+	position:fixed;
+	z-index: 9999;
+}
+.load{
+	position: fixed;
+	z-index: 77777;
+	opacity: 1; 
+	left: calc(50%-400px);
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 0 auto;
+}
+.point{
+	position:absolute;
+	background: none;
+	width: 10%;
+	top: calc(15% - 70px);
+	margin: 0 auto;
+	left: calc(50% - 150px);
+	z-index: 999999;
+}
+
+.point:hover {
+	animation: myAnimation 0.9s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes myAnimation{
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+body {
+  margin: 0;
+  background: #fff;
+}
+
