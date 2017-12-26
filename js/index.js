@@ -362,15 +362,18 @@ camera.lookAt(new THREE.Vector3(0,3,0));
 
 
 	var sphereGeometry = new THREE.SphereGeometry(50, 32, 16);
-	var material = new THREE.MeshPhongMaterial({});
 	material.side = THREE.BackSide;
 	var sphere = new THREE.Mesh( sphereGeometry, material );
-
+	var loader = new THREE.TextureLoader();
+	loader.load( 'land_ocean_ice_cloud_2048.jpg', function ( texture ) {
+	var geometry = new THREE.SphereGeometry( 200, 20, 20 );
+	var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5 } );
+	var mesh = new THREE.Mesh( geometry, material );
+	group.add( mesh );
+				} );
 	sphere.position.set(0, -50, 0);
 	scene.add( sphere );
 
-	var geometry = new THREE.Geometry();
-	var material = new THREE.MeshNormalMaterial();
 var floor = new THREE.Mesh(
 					new THREE.PlaneGeometry(0,0,0,0),
 					new THREE.MeshPhongMaterial({
