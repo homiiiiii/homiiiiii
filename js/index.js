@@ -267,7 +267,7 @@ proto.updateLeg = function(leg,other) {
 proto.update = function() {
 
 
-	var tempo = Date.now()/195;
+	var tempo = Date.now()/200;
 
 
 	this.outwards = camera.position.clone().sub(controls.target).normalize().multiplyScalar(.09);
