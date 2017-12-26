@@ -362,7 +362,6 @@ camera.lookAt(new THREE.Vector3(0,3,0));
 
 
 	var sphereGeometry = new THREE.SphereGeometry(50, 32, 16);
-	material.side = THREE.BackSide;
 	var sphere = new THREE.Mesh( sphereGeometry, material );
 	var loader = new THREE.TextureLoader();
 	loader.load( '../land_ocean_ice_cloud_2048.jpg', function ( texture ) {
